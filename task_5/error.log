@@ -1,0 +1,99 @@
+{"level":"error","message":"Failed to create database file","service":"user-service"}
+{"level":"error","message":"Error occur during connect to mongodb","service":"user-service"}
+{"level":"error","message":"Error occur during connect to mongodb","service":"user-service"}
+{"level":"error","message":"Error occur during connect to mongodb","service":"user-service"}
+{"level":"error","message":"Error occur during connect to mongodb","service":"user-service"}
+{"level":"error","message":"400-Buddy already exist.","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"400-Buddy already exist.","service":"user-service"}
+{"level":"error","message":"400-Buddy already exist.","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"400-Buddy already exist.","service":"user-service"}
+{"level":"error","message":"Buddy with 3 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 3 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 3 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't exist","service":"user-service"}
+{"level":"error","message":"500-error.status is not a function","service":"user-service"}
+{"level":"error","message":"400-Buddy already exist.","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"500-Cannot read properties of undefined (reading 'toLowerCase')","service":"user-service"}
+{"level":"error","message":"Buddy with 3 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 2 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 1 doesn't not found","service":"user-service"}
+{"level":"error","message":"404-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"400-Buddy already exist.","service":"user-service"}
+{"level":"error","message":"400-Buddy already exist.","service":"user-service"}
+{"level":"error","message":"Buddy with 78 doesn't not found","service":"user-service"}
+{"level":"error","message":"400-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 78 doesn't not found","service":"user-service"}
+{"level":"error","message":"400-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"Buddy with 78 doesn't not found","service":"user-service"}
+{"level":"error","message":"400-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"500-Cannot access 'buddy' before initialization","service":"user-service"}
+{"level":"error","message":"500-Cannot access 'buddy' before initialization","service":"user-service"}
+{"level":"error","message":"500-Cast to date failed for value \"18/08/2004\" (type string) at path \"dob\"","service":"user-service"}
+{"level":"error","message":"500-Cast to date failed for value \"18/08/2004\" (type string) at path \"dob\"","service":"user-service"}
+{"level":"error","message":"500-Cast to date failed for value \"18/08/2004\" (type string) at path \"dob\"","service":"user-service"}
+{"level":"error","message":"500-Parameter \"filter\" to findOneAndUpdate() must be an object, got \"8\" (type string)","service":"user-service"}
+{"level":"error","message":"500-Cast to date failed for value \"18/08/2004\" (type string) at path \"dob\"","service":"user-service"}
+{"level":"error","message":"500-Cast to date failed for value \"Invalid Date\" (type Date) at path \"dob\"","service":"user-service"}
+{"level":"error","message":"500-Cast to date failed for value \"Invalid Date\" (type Date) at path \"dob\"","service":"user-service"}
+{"level":"error","message":"500-Cast to date failed for value \"Invalid Date\" (type Date) at path \"dob\"","service":"user-service"}
+{"level":"error","message":"500-Cast to date failed for value \"Invalid Date\" (type Date) at path \"dob\"","service":"user-service"}
+{"level":"error","message":"Buddy with 9 doesn't not found","service":"user-service"}
+{"level":"error","message":"400-Buddy doesn't exist","service":"user-service"}
+{"level":"error","message":"500-id is not defined","service":"user-service"}
+{"level":"error","message":"500-id is not defined","service":"user-service"}
+{"level":"error","message":"500-Cast to Number failed for value \"susi\" (type string) at path \"employeeId\" for model \"User\"","service":"user-service"}
+{"level":"error","message":"500-Cast to Number failed for value \"susi\" (type string) at path \"employeeId\" for model \"User\"","service":"user-service"}
+{"level":"error","message":"500-Cast to Number failed for value \"susi\" (type string) at path \"employeeId\" for model \"User\"","service":"user-service"}
+{"level":"error","message":"500-Cast to Number failed for value \"hi\" (type string) at path \"employeeId\" for model \"User\"","service":"user-service"}
+{"level":"error","message":"500-Cast to Number failed for value \"hi\" (type string) at path \"employeeId\" for model \"User\"","service":"user-service"}
