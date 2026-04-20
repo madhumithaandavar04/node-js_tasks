@@ -1,4 +1,5 @@
 import * as buddyService from "../services/buddyService.js";
+
 /**
  * get all buddies
  * @param {*} req 
@@ -16,6 +17,7 @@ export const getBuddies = (req, res, next) => {
         next(error);
     }
 }
+
 /**
  * get a budding using id or name
  * @param {*} req 
@@ -23,7 +25,7 @@ export const getBuddies = (req, res, next) => {
  * @param {*} next 
  * @returns 
  */
-export const getBuddy = (req, res,next) => {
+export const getBuddy = (req, res, next) => {
     const query = req.params.query;
     try {
         const buddy = buddyService.getOne(query);
@@ -42,19 +44,19 @@ export const getBuddy = (req, res,next) => {
  * @param {*} next 
  * @returns created buddy
  */
-export const createBuddy = (req, res,next) => {
+export const createBuddy = (req, res, next) => {
     const buddy = req.body;
     try {
         buddyService.create(buddy);
         return res.status(201).json({
             status: "success",
             message: "Buddy created successfully"
-        }
-        )
+        })
     } catch (error) {
         next(error);
     }
 }
+
 /**
  * update the buddy using id
  * @param {*} req 
@@ -62,7 +64,7 @@ export const createBuddy = (req, res,next) => {
  * @param {*} next 
  * @returns updated buddy
  */
-export const updateBuddy = (req, res,next) => {
+export const updateBuddy = (req, res, next) => {
     const id = req.params.id;
     const body = req.body;
     try {
@@ -76,13 +78,14 @@ export const updateBuddy = (req, res,next) => {
         next(error);
     }
 }
+
 /**
  * delete the buddy using id
  * @param {*} req 
  * @param {*} res 
  * @param {*} next 
  */
-export const deleteBuddy = (req, res,next) => {
+export const deleteBuddy = (req, res, next) => {
     try {
         buddyService.remove(req.params.id);
         res.status(200).json({
