@@ -4,13 +4,13 @@ import Joi from "joi";
  * @param {*} schema 
  * @returns validateSignup function
  */
-const validator=(schema)=>{
-    return (payload)=>{
+const validator = (schema) => {
+    return (payload) => {
 return schema.validate(payload);
 }
 }
 //signup Schema
-const signupSchema=Joi.object({
+const signupSchema = Joi.object({
    employeeId:Joi.number().required(), 
    realName:Joi.string().required(),
    nickName:Joi.string().required(),
@@ -18,6 +18,6 @@ const signupSchema=Joi.object({
     hobbies:Joi.string().required()
 })
 
-const validateSignup=validator(signupSchema);
+const validateSignup = validator(signupSchema);
 
 export default validateSignup;
