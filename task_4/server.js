@@ -5,10 +5,10 @@ import { initializeFile, writeFile } from "./services/fileService.js";
 import { errorhandler } from "./middleware/errorHandler.js";
 
 // env variables
-const PORT=process.env.PORT;
+const PORT = process.env.PORT;
 
 // initialize server
-const app=express();
+const app = express();
 
 // middlewares
 app.use(express.json());
