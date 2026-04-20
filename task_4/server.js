@@ -1,7 +1,6 @@
 import express from "express"
 import dotenv from "dotenv/config"
 import buddyRoutes from "./routes/buddyRoutes.js"
-import { create } from "./services/buddyService.js";
 import { initializeFile, writeFile } from "./services/fileService.js";
 import { errorhandler } from "./middleware/errorHandler.js";
 
