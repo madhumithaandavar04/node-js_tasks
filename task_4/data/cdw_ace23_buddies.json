@@ -1,1 +1,39 @@
-[{"employeeId":1,"realName":"madhu","nickName":"mitha","dob":"18/08/2004","hobbies":"['badmintos','drawing']"},{"employeeId":2,"realName":"madhu","nickName":"mitha","dob":"18/08/2004","hobbies":"['badmintos','drawing']"},{"employeeId":3,"realName":"madhu","nickName":"mitha","dob":"18/08/2004","hobbies":"['badmintos','drawing']"},{"employeeId":4,"realName":"madhu","nickName":"mitha","dob":"18/08/2004","hobbies":"['badmintos','drawing']"},{"employeeId":7,"realName":"susi","nickName":"mitha","dob":"18/08/2004","hobbies":"['badmintos','drawing']"}]
+const buddies = [
+  {
+    employeeId: 1,
+    realName: "madhu",
+    nickName: "mitha",
+    dob: "18/08/2004",
+    hobbies: ["badminton", "drawing"]
+  },
+  {
+    employeeId: 2,
+    realName: "madhu",
+    nickName: "mitha",
+    dob: "18/08/2004",
+    hobbies: ["badminton", "drawing"]
+  },
+  {
+    employeeId: 3,
+    realName: "madhu",
+    nickName: "mitha",
+    dob: "18/08/2004",
+    hobbies: ["badminton", "drawing"]
+  },
+  {
+    employeeId: 4,
+    realName: "madhu",
+    nickName: "mitha",
+    dob: "18/08/2004",
+    hobbies: ["badminton", "drawing"]
+  },
+  {
+    employeeId: 7,
+    realName: "susi",
+    nickName: "mitha",
+    dob: "18/08/2004",
+    hobbies: ["badminton", "drawing"]
+  }
+];
+
+export default buddies;
