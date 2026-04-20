@@ -49,7 +49,6 @@ export const create = (buddy) => {
  */
 export const update = (id, buddy) => {
     let buddies = readFile();
-    console.log(buddies);
     const index = buddies.findIndex(buddy => buddy.employeeId === id);
     if (index === -1) {
         const error = new Error("Buddy doesn't exist");
