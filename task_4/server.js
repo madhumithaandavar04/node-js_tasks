@@ -14,11 +14,11 @@ const app = express();
 app.use(express.json());
 
 // using modular routes
-app.use('/api/v1/buddies',buddyRoutes);
+app.use('/api/v1/buddies', buddyRoutes);
 
 // error middleware
 app.use(errorhandler);
-app.listen(PORT,()=>{
+app.listen(PORT, () => {
    initializeFile();
    console.log(`Server is listening to the PORT ${PORT}.`);   
 })
