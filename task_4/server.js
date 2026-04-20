@@ -20,6 +20,5 @@ app.use('/api/v1/buddies',buddyRoutes);
 app.use(errorhandler);
 app.listen(PORT,()=>{
    initializeFile();
-   console.log(`Server is listening to the PORT ${PORT}.`);
-     
+   console.log(`Server is listening to the PORT ${PORT}.`);   
 })
