@@ -1,10 +1,10 @@
 import express from "express";
 import * as buddyController from "../controllers/buddyController.js";
 
-//create router
-const router=express.Router();
+// create router
+const router = express.Router();
 
-//routes
+// routes
 router.get("/",buddyController.getBuddies);
 router.get("/:query",buddyController.getBuddy);
 router.post("/",buddyController.createBuddy);
