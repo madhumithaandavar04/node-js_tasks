@@ -4,19 +4,19 @@ import buddyRoutes from "./routes/buddyRoutes.js"
 import { initializeFile, writeFile } from "./services/fileService.js";
 import { errorhandler } from "./middleware/errorHandler.js";
 
-//env variables
+// env variables
 const PORT=process.env.PORT;
 
-//initialize server
+// initialize server
 const app=express();
 
-//middlewares
+// middlewares
 app.use(express.json());
 
-//using modular routes
+// using modular routes
 app.use('/api/v1/buddies',buddyRoutes);
 
-//error middleware
+// error middleware
 app.use(errorhandler);
 app.listen(PORT,()=>{
    initializeFile();
