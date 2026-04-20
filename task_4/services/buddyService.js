@@ -24,10 +24,10 @@ export const getOne = (query) => {
  * @returns new buddy
  */
 export const create = (buddy) => {
-    const{error,value}=validateSignup(buddy);
+    const {error,value} = validateSignup(buddy);
     if(error){
-     const newError= new Error(error.details[0].message);
-     newError.status=400;
+     const newError = new Error(error.details[0].message);
+     newError.status = 400;
      throw newError;
     }
     if (isBuddyExist(value.employeeId)) {
@@ -52,7 +52,7 @@ export const update = (id, buddy) => {
     const index = buddies.findIndex(buddy => buddy.employeeId === id);
     if (index === -1) {
         const error = new Error("Buddy doesn't exist");
-        error.status=404;
+        error.status = 404;
         throw error;
     }
     buddies[index] = { ...buddies[index], ...buddy };
@@ -71,7 +71,7 @@ export const remove = (id) => {
         throw error;
     }
     const buddies = readFile();
-    const filteredBuddies = buddies.filter((buddy) => buddy.employeeId != id);
+    const filteredBuddies = buddies.filter((buddy) => buddy.employeeId !== id);
     writeFile(filteredBuddies);
 }
 
@@ -82,7 +82,7 @@ export const remove = (id) => {
  */
 export const isBuddyExist = (id) => {
     const buddies = getAll();
-    return buddies.findIndex(buddy => buddy.employeeId === id) != -1;
+    return buddies.findIndex(buddy => buddy.employeeId === id) !== -1;
 }
 
 /**
@@ -95,7 +95,7 @@ export const getBuddyByIdOrName = (query) => {
     const buddy = buddies.find(buddy => {
       const isIdMatch = buddy.employeeId.toString() === query;
       const isNameMatch = typeof query === 'string' && 
-                           buddy.realName.toLowerCase() === query.toLowerCase();
+                          buddy.realName.toLowerCase() === query.toLowerCase();
        return isIdMatch || isNameMatch;                    
 });
     if (!buddy) {
