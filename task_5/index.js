@@ -1,7 +1,6 @@
 import express from "express"
 import dotenv from "dotenv/config";
 import buddyRoutes from "./routes/buddyRoutes.js"
-import { create } from "./services/buddyService.js";
 import { errorhandler } from "./middleware/errorHandler.js";
 import cors from "cors"
 import { logger } from "./logger/config.js";
@@ -22,6 +21,11 @@ app.use('/api/v1/buddies',buddyRoutes);
 //error middleware
 app.use(errorhandler);
 app.listen(PORT,async()=>{
-   logger.info(`Buddy Nickname Project running on port ${PORT}`);
-   await connectDB();
+   logger.info(`Buddy Nickname Project running on port ${PORT}`);;
+  try {
+      await connectDB();
+      logger.verbose("Database connected successfully");
+   } catch (error) {
+      logger.error(`Server failed to connect to database: ${error.message}`);
+   }
 })

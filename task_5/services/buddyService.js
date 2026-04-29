@@ -1,45 +1,50 @@
 import { logger } from "../logger/config.js";
 import User from "../models/userModel.js";
+
 /**
  * get the all buddies and sent
  * @returns all buddies
  */
-export const getAll = async () => {
+export const fetchAllBuddies = async () => {
+    // debug message 
     logger.debug("Fetching all buddies from database");
     const buddies = await User.find();
-    console.log(buddies);
     return buddies;
 }
 
 /**
  * get buddy id or name as params and find the buddy and return
- * @param {*} query 
+ * @param {*} idOrName 
  * @returns buddy
  */
-export const getOne = async (query) => {
-    logger.debug(`Fetching buddy with query : ${query}`);
-    const buddy = await getBuddyByIdOrName(query);
+export const fetchBuddyByCriteria = async (idOrName) => {
+    // log specific input param
+    logger.debug(`Fetching buddy with query : ${idOrName}`);
+    const buddy = await searchBuddyByAttribute(idOrName);
     return buddy;
 }
 
 /**
  * get the new buddy details and add it to the buddy list
- * @param {*} buddy 
+ * @param {*} buddyData 
  * @returns new buddy
  */
-export const create = async (buddy) => {
+export const saveNewBuddy = async (buddyData) => {
     try {
-        const isExist = await isBuddyExist(buddy.employeeId);
+        logger.verbose(`Starting save process for employeeId: ${buddyData.employeeId}`);
+        const isExist = await checkBuddyExistence(buddyData.employeeId);
         if (isExist) {
-            logger.warn(`Buddy already exist : ${buddy.employeeId}`);
+            // warning log 
+            logger.warn(`Buddy already exist : ${buddyData.employeeId}`);
             const error = new Error("Buddy already exist.");
             error.status = 400;
             throw error;
         }
-        const date = new Date(buddy.dob);
-        const newUser = new User({ ...buddy, dob: date });
+        const date = new Date(buddyData.dob);
+        const newUser = new User({ ...buddyData, dob: date });
         await newUser.save();
-        logger.info(`Successfully created buddy: ${buddy.employeeId}`);
+        // success message
+        logger.info(`Successfully created buddy: ${buddyData.employeeId}`);
         return newUser;
     } catch (error) {
         throw error;
@@ -48,24 +53,26 @@ export const create = async (buddy) => {
 
 /**
  * get the buddy id and updated details and update the buddy
- * @param {*} id 
- * @param {*} buddy 
+ * @param {*} employeeId 
+ * @param {*} updatedDetails 
  * @returns updated buddy
  */
-export const update = async (id, body) => {
+export const modifyBuddyDetails = async (employeeId, updatedDetails) => {
     try {
-        const exists = await isBuddyExist(id);
+        const exists = await checkBuddyExistence(employeeId);
         if (!exists) {
-            logger.error(`Buddy with ${id} doesn't not found`);
+            // error
+            logger.error(`Buddy with ${employeeId} doesn't not found`);
             const error = new Error("Buddy doesn't exist");
             error.status = 400;
             throw error;
         }
-        const newDate = new Date(body?.dob);
-        if (body?.dob)
-            body.dob = newDate;
-        const buddy = await User.findOneAndUpdate({ employeeId: id }, { $set: body }, { new: true });
-        logger.debug(`Buddy id : ${id}.Updated successfully.`)
+        const newDate = new Date(updatedDetails?.dob);
+        if (updatedDetails?.dob)
+            updatedDetails.dob = newDate;
+        const buddy = await User.findOneAndUpdate({ employeeId: employeeId }, { $set: updatedDetails }, { new: true });
+        // info success message
+        logger.info(`Buddy id : ${employeeId}. Updated successfully.`);
         return buddy;
     } catch (error) {
         throw error;
@@ -74,19 +81,21 @@ export const update = async (id, body) => {
 
 /**
  * get the buddy id and remove from the buddy list
- * @param {*} id 
+ * @param {*} employeeId 
  */
-export const remove = async (id) => {
+export const removeBuddyRecord = async (employeeId) => {
     try {
-        const exists = await isBuddyExist(id);
+        const exists = await checkBuddyExistence(employeeId);
         if (!exists) {
-            logger.error(`Buddy with ${id} doesn't not found`);
+            // error 
+            logger.error(`Buddy with ${employeeId} doesn't not found`);
             const error = new Error("Buddy doesn't exist");
             error.status = 400;
             throw error;
         }
-        await User.deleteOne({ employeeId: id });
-        logger.info(`Deleted buddy with ID: ${id}`);
+        await User.deleteOne({ employeeId: employeeId });
+        // info : success delete
+        logger.info(`Deleted buddy with ID: ${employeeId}`);
     } catch (error) {
         throw error;
     }
@@ -94,12 +103,14 @@ export const remove = async (id) => {
 
 /**
  * check whether the buddy with id exist
- * @param {*} id 
+ * @param {*} employeeId 
  * @returns 
  */
-export const isBuddyExist = async (id) => {
+export const checkBuddyExistence = async (employeeId) => {
     try {
-        const isExist = await User.exists({ employeeId: id });
+        //verbose to track logic
+        logger.verbose(`Checking existence for ID: ${employeeId}`);
+        const isExist = await User.exists({ employeeId: employeeId });
         return isExist;
     } catch (error) {
         throw error;
@@ -108,31 +119,33 @@ export const isBuddyExist = async (id) => {
 
 /**
  * get the buddy id or name and return the buddy
- * @param {*} id 
+ * @param {*} identifier 
  * @returns buddy
  */
-export const getBuddyByIdOrName = async (query) => {
+export const searchBuddyByAttribute = async (identifier) => {
     try {
         let searchQuery = {};
-        if (!isNaN(query)) {
+        if (!isNaN(identifier)) {
             searchQuery = {
                 $or: [
-                    { employeeId: query },
-                    { realName: query }
+                    { employeeId: identifier },
+                    { realName: identifier }
                 ]
             }
         } else {
             searchQuery = {
-                realName: query
+                realName: identifier
             }
         }
         const buddy = await User.findOne(searchQuery);
         if (!buddy) {
-            logger.warn(`Buddy with ${id} doesn't exist `);
+            // warning for failed searches
+            logger.warn(`Buddy with ${identifier} doesn't exist `);
             const error = new Error(`Buddy doesn't exist`);
             error.status = 404;
             throw error;
         }
+        //success find
         logger.info(`Buddy found:${buddy.realName} (${buddy.employeeId})`);
         return buddy;
     } catch (error) {

@@ -1,0 +1,39 @@
+{"level":"info","message":"Buddy Nickname Project running on port 5000","service":"user-service","timestamp":"2026-04-29 22:57:43"}
+{"level":"info","message":"MongoDB connected: ac-tfkjsyo-shard-00-00.yc91oti.mongodb.net","service":"user-service","timestamp":"2026-04-29 22:57:43"}
+{"level":"verbose","message":"Database connected successfully","service":"user-service","timestamp":"2026-04-29 22:57:43"}
+{"level":"info","message":"Buddy Nickname Project running on port 3000","service":"user-service","timestamp":"2026-04-29 23:00:55"}
+{"level":"info","message":"MongoDB connected: ac-tfkjsyo-shard-00-00.yc91oti.mongodb.net","service":"user-service","timestamp":"2026-04-29 23:00:56"}
+{"level":"verbose","message":"Database connected successfully","service":"user-service","timestamp":"2026-04-29 23:00:56"}
+{"level":"verbose","message":"Checking existence for ID: 8","service":"user-service","timestamp":"2026-04-29 23:01:15"}
+{"level":"error","message":"Buddy with 8 doesn't not found","service":"user-service","timestamp":"2026-04-29 23:01:15"}
+{"level":"error","message":"400 - Buddy doesn't exist - PUT /api/v1/buddies/8","service":"user-service","timestamp":"2026-04-29 23:01:15"}
+{"level":"verbose","message":"Error Handler caught exception: Buddy doesn't exist","service":"user-service","timestamp":"2026-04-29 23:01:15"}
+{"level":"verbose","message":"Controller: createBuddy - Request received for 90","service":"user-service","timestamp":"2026-04-29 23:01:51"}
+{"level":"verbose","message":"Starting save process for employeeId: 3","service":"user-service","timestamp":"2026-04-29 23:01:51"}
+{"level":"verbose","message":"Checking existence for ID: 3","service":"user-service","timestamp":"2026-04-29 23:01:51"}
+{"level":"warn","message":"Buddy already exist : 3","service":"user-service","timestamp":"2026-04-29 23:01:51"}
+{"level":"error","message":"400 - Buddy already exist. - POST /api/v1/buddies","service":"user-service","timestamp":"2026-04-29 23:01:51"}
+{"level":"verbose","message":"Error Handler caught exception: Buddy already exist.","service":"user-service","timestamp":"2026-04-29 23:01:51"}
+{"level":"verbose","message":"Controller: createBuddy - Request received for 90","service":"user-service","timestamp":"2026-04-29 23:01:58"}
+{"level":"verbose","message":"Starting save process for employeeId: 1","service":"user-service","timestamp":"2026-04-29 23:01:58"}
+{"level":"verbose","message":"Checking existence for ID: 1","service":"user-service","timestamp":"2026-04-29 23:01:58"}
+{"level":"warn","message":"Buddy already exist : 1","service":"user-service","timestamp":"2026-04-29 23:01:58"}
+{"level":"error","message":"400 - Buddy already exist. - POST /api/v1/buddies","service":"user-service","timestamp":"2026-04-29 23:01:58"}
+{"level":"verbose","message":"Error Handler caught exception: Buddy already exist.","service":"user-service","timestamp":"2026-04-29 23:01:58"}
+{"level":"verbose","message":"Controller: createBuddy - Request received for 90","service":"user-service","timestamp":"2026-04-29 23:02:08"}
+{"level":"verbose","message":"Starting save process for employeeId: 1","service":"user-service","timestamp":"2026-04-29 23:02:08"}
+{"level":"verbose","message":"Checking existence for ID: 1","service":"user-service","timestamp":"2026-04-29 23:02:08"}
+{"level":"warn","message":"Buddy already exist : 1","service":"user-service","timestamp":"2026-04-29 23:02:08"}
+{"level":"error","message":"400 - Buddy already exist. - POST /api/v1/buddies","service":"user-service","timestamp":"2026-04-29 23:02:08"}
+{"level":"verbose","message":"Error Handler caught exception: Buddy already exist.","service":"user-service","timestamp":"2026-04-29 23:02:08"}
+{"level":"verbose","message":"Controller: createBuddy - Request received for 90","service":"user-service","timestamp":"2026-04-29 23:02:17"}
+{"level":"verbose","message":"Starting save process for employeeId: 1","service":"user-service","timestamp":"2026-04-29 23:02:17"}
+{"level":"verbose","message":"Checking existence for ID: 1","service":"user-service","timestamp":"2026-04-29 23:02:17"}
+{"level":"warn","message":"Buddy already exist : 1","service":"user-service","timestamp":"2026-04-29 23:02:17"}
+{"level":"error","message":"400 - Buddy already exist. - POST /api/v1/buddies","service":"user-service","timestamp":"2026-04-29 23:02:17"}
+{"level":"verbose","message":"Error Handler caught exception: Buddy already exist.","service":"user-service","timestamp":"2026-04-29 23:02:17"}
+{"level":"verbose","message":"Controller: getBuddies - GET /api/v1/buddies","service":"user-service","timestamp":"2026-04-29 23:02:23"}
+{"level":"warn","message":"Buddy with 2 doesn't exist ","service":"user-service","timestamp":"2026-04-29 23:02:32"}
+{"level":"error","message":"404 - Buddy doesn't exist - GET /api/v1/buddies/2","service":"user-service","timestamp":"2026-04-29 23:02:32"}
+{"level":"verbose","message":"Error Handler caught exception: Buddy doesn't exist","service":"user-service","timestamp":"2026-04-29 23:02:32"}
+{"level":"info","message":"Buddy found:susi (1)","service":"user-service","timestamp":"2026-04-29 23:02:37"}

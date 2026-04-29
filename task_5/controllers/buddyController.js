@@ -1,4 +1,6 @@
 import * as buddyService from "../services/buddyService.js";
+import { logger } from "../logger/config.js";
+
 /**
  * get all buddies
  * @param {*} req 
@@ -8,7 +10,9 @@ import * as buddyService from "../services/buddyService.js";
  */
 export const getBuddies = async (req, res, next) => {
     try {
-        const buddies = await buddyService.getAll();
+        // track which endpoint hit
+        logger.verbose(`Controller: getBuddies - GET /api/v1/buddies`);
+        const buddies = await buddyService.fetchAllBuddies();
         res.status(200).json({
             status: "success",
             data: buddies
@@ -17,6 +21,7 @@ export const getBuddies = async (req, res, next) => {
         next(error);
     }
 }
+
 /**
  * get a budding using id or name
  * @param {*} req 
@@ -27,7 +32,9 @@ export const getBuddies = async (req, res, next) => {
 export const getBuddy = async (req, res, next) => {
     const query = req.params.query;
     try {
-        const buddy = await buddyService.getOne(query);
+        // debug: log the param
+        logger.debug(`Controller: getBuddy - Query: ${query}`);
+        const buddy = await buddyService.fetchBuddyByCriteria(query);
         res.status(200).json({
             status: "success",
             data: buddy
@@ -36,6 +43,7 @@ export const getBuddy = async (req, res, next) => {
         next(error);
     }
 }
+
 /**
  * create buddy
  * @param {*} req 
@@ -46,16 +54,18 @@ export const getBuddy = async (req, res, next) => {
 export const createBuddy = async (req, res, next) => {
     const buddy = req.body;
     try {
-        await buddyService.create(buddy);
+        // verbose :track the start create buddy
+        logger.verbose(`Controller: createBuddy - Request received for ${buddy.realName}`);
+        await buddyService.saveNewBuddy(buddy);
         return res.status(201).json({
             status: "success",
             message: "Buddy created successfully"
-        }
-        )
+        })
     } catch (error) {
         next(error);
     }
 }
+
 /**
  * update the buddy using id
  * @param {*} req 
@@ -67,7 +77,9 @@ export const updateBuddy = async (req, res, next) => {
     const id = req.params.id;
     const body = req.body;
     try {
-        const updatedBuddy = await buddyService.update(id, body);
+        // debug:log the id param
+        logger.debug(`Controller: updateBuddy - ID: ${id}`);
+        const updatedBuddy = await buddyService.modifyBuddyDetails(id, body);
         return res.status(200).json({
             status: "success",
             message: "Buddy updated",
@@ -77,6 +89,7 @@ export const updateBuddy = async (req, res, next) => {
         next(error);
     }
 }
+
 /**
  * delete the buddy using id
  * @param {*} req 
@@ -85,7 +98,9 @@ export const updateBuddy = async (req, res, next) => {
  */
 export const deleteBuddy = async (req, res, next) => {
     try {
-        await buddyService.remove(req.params.id);
+        //verbose :track the delete buddy
+        logger.verbose(`Controller: deleteBuddy - Attempting to remove ID: ${req.params.id}`);
+        await buddyService.removeBuddyRecord(req.params.id);
         res.status(201).json({
             status: "success",
             message: "Buddy deleted successfully"
