@@ -2553,3 +2553,7 @@
 {"level":"info","message":"MongoDB connected ac-tfkjsyo-shard-00-00.yc91oti.mongodb.net","service":"user-service"}
 {"level":"info","message":"Buddy Nickname Project running on port 3000","service":"user-service"}
 {"level":"info","message":"MongoDB connected ac-tfkjsyo-shard-00-00.yc91oti.mongodb.net","service":"user-service"}
+{"level":"info","message":"Buddy Nickname Project running on port undefined","service":"user-service"}
+{"level":"error","message":"Error occur during connect to mongodb","service":"user-service"}
+{"level":"info","message":"Buddy Nickname Project running on port undefined","service":"user-service"}
+{"level":"error","message":"Error occur during connect to mongodb","service":"user-service"}

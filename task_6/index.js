@@ -4,7 +4,7 @@ import buddyRoutes from "./routes/buddyRoutes.js"
 import { errorhandler } from "./middleware/errorHandler.js";
 import cors from "cors"
 import { logger } from "./logger/config.js";
-import connectDB from "./data/db.config.js";
+import connectDB from "./services/dbServices.js";
 import authRoutes from "./routes/authRoutes.js"
 
 //env variables
